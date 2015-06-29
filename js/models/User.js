@@ -8,7 +8,7 @@ var User = Backbone.Model.extend({
 
     },
     setPictures: function(pics) {
-        var pictures = [];
+        var pictures = this.get('pictures');
         for (var i = 0; i < pics.length; i++) {
             var fecha = new Date(pics[i].created_time);
             var date = fecha.getFullYear().toString();

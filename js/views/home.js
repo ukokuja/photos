@@ -26,6 +26,7 @@ app.HomeView = Backbone.View.extend({
         return this;
     },
     renderPictures: function(pics){
+        pics.sort(function(a,b){return b.attributes.likes - a.attributes.likes});
         $("#fb").removeClass("col-md-12 col-md-3").addClass("col-md-3");
         $("#picture-container").addClass("col-md-9");
         for(var i = 0; i<pics.length; i++){
